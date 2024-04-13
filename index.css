@@ -1,0 +1,771 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style général */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;  
+}
+/* Style du navBar*/
+header .navbar{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: hsla(0, 0%, 99%, .99);
+    transition: box-shadow .25s ease 0s;
+}
+
+.sec_Principal{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1015px;
+    padding: 6px 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*Style du logo*/
+.sec_Principal .logo{
+    width: 260px;
+    height: 35px;
+    
+}
+
+.sec_Principal .logo img{
+    max-width: 110%;
+    padding: 10px;
+    
+}
+
+/*Style du menu*/
+.sec_Principal .main-menu{
+    position: relative;
+    float: right;
+    padding: 15px;
+}
+.sec_Principal .main-menu .menu{
+    list-style-type: none;
+}
+.menu li{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.sub_menu{
+    display: none;
+    padding-top: 10px;
+    position: absolute;
+    min-width: 230px;
+    margin-left: -100px;
+    background: #fff;
+    box-shadow: 0 5px 10px 0 #d3cfc9;
+    z-index: 1;
+}
+/*Style des lien*/
+.menu li a{
+    text-decoration: none;
+    color: #ABABAB;
+    line-height: 2em;
+    margin-left: 15px;
+}
+
+.menu .current{
+    color: #00b39b;
+    font-weight: 500;
+}
+.menu li a:hover{
+    color: #00B39B;
+}
+
+header li:hover .sub_menu{
+    display: block;
+    position: absolute;
+}
+
+/*Style du Grand titre et logo*/
+
+.section1{
+    max-width: 1015px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+}
+
+.logo2{
+    display: block;
+    margin: 0 auto;
+    font-weight: 700;
+}
+.section1 .logo2{
+    width: 4%;
+    height: auto;
+}
+
+.section1 h1{
+    text-align: center;
+}
+h1{
+    font-size: 30px;
+    font-weight: 300;
+    color: #00B39B;
+    margin: 1em 0;
+    font-family: "Work Sans", sans-serif;
+    letter-spacing: -0.3px;
+    font-style: normal;
+}
+
+/*Style des paragraph*/
+.section2{
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    font-style: normal;
+    color: #747474;
+    max-width: 1015px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section2 .paragraph1{
+    margin-left: 10px;
+}
+.section2 .paragraph2{
+    margin-right: 2px;
+}
+
+/*Style des cartes*/
+.card{
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0;
+    max-width: 1015px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+}
+
+.carte1{
+    margin: 10px;
+}
+
+.carte2{
+    margin: 10px;
+}
+
+.carte3{
+    margin: 10px;
+}
+
+.card1{
+    background: #19D1B9;
+    border-radius: 10px;
+    padding: 32px 7px; 
+    height: 350px;
+    width: 313px;
+}
+
+.card2{
+    background: #3D83E1;
+    border-radius: 10px;
+    padding: 32px 7px; 
+    height: 350px;
+    width: 313px;
+}
+
+.card3{
+    background: #1B2734;
+    border-radius: 10px;
+    padding: 32px 7px; 
+    height: 350px;
+    width: 313px;
+}
+
+.card1 .icon_patient{
+    margin: 0px 35px;
+}
+
+.card2 .icon_doctors{
+    margin: 0px 35px;
+}
+
+.card3 .icon_clinics{
+    margin: 0px 35px;
+}
+
+.card1_body .card1_title{
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: -0.3px;
+    font-style: normal;
+    font-size: 26px;
+    color: #FFFFFF;
+    line-height: 33.8px;
+    font-weight: 400;
+    margin: 2px 35px;
+}
+
+.card2_body .card2_title{
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: -0.3px;
+    font-style: normal;
+    font-size: 26px;
+    color: #FFFFFF;
+    line-height: 33.8px;
+    font-weight: 400;
+    margin: 2px 35px;
+}
+
+.card3_body .card3_title{
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: -0.3px;
+    font-style: normal;
+    font-size: 26px;
+    color: #FFFFFF;
+    line-height: 33.8px;
+    font-weight: 400;
+    margin: 2px 35px;
+}
+
+.card1_body .card1_text{
+    font-size: 24px;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 28.8px;
+    letter-spacing: -0.3px;
+    font-style: normal;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin: 5px 35px;
+    padding-bottom: 85px;
+    /*height: 152px;*/
+}
+
+.card2_body .card2_text{
+    font-size: 24px;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 28.8px;
+    letter-spacing: -0.3px;
+    font-style: normal;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin: 5px 35px;
+    padding-bottom: 85px;
+    /*height: 152px;*/
+}
+
+.card3_body .card3_text{
+    font-size: 24px;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 28.8px;
+    letter-spacing: -0.3px;
+    font-style: normal;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin: 5px 35px;
+    padding-bottom: 30px;
+    /*height: 152px;*/
+}
+
+.card1 .box1{
+    width: 150px;
+    height: 30px;
+    /*border: 1px solid #999;*/
+    text-decoration: underline;
+    font-size: 18px;
+    color: #1c87c9;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+    margin-left: 35px;
+}
+
+.card2 .box2{
+    width: 158px;
+    height: 30px;
+    /*border: 1px solid #999;*/
+    text-decoration: underline;
+    font-size: 18px;
+    color: #1c87c9;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+    margin-left: 35px;
+}
+
+.card3 .box3{
+    width: 174px;
+    height: 30px;
+    /*border: 1px solid #999;*/
+    text-decoration: underline;
+    font-size: 18px;
+    color: #1c87c9;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+    margin-left: 35px;
+}
+
+.card3_4 .box4{
+    width: 226px;
+    height: 30px;
+    /*border: 1px solid #999;*/
+    text-decoration: underline;
+    font-size: 18px;
+    color: #1c87c9;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+    margin-left: 35px;
+}
+
+/*Style des partenanires*/
+.partner{
+    zoom: 1;
+    max-width: 1015px;
+    padding: 0 20px;
+    margin: 0 auto 0 auto;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 160px;
+}
+
+.partner h1{
+    font-size: 25px;
+    float: left;
+    margin: 0.25em 0 0.35em;
+    letter-spacing: -0.3px;
+    width: 33%;
+    padding-right: 2em;
+    line-height: 33.8px;
+}
+
+.partner .partner_logo{
+    align-items: center;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0;
+    filter: grayscale(100%);
+    list-style: none;
+    width: 67%;
+    padding-left: 15px;
+}
+
+.partner_logo:hover{
+    filter: none;
+}
+
+.partner_logo li{
+    font-size: 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #747474;
+    display: inline-block;
+    margin-top: 0;
+    padding: 5px 0 5px 5px;
+    width: 25%;
+}
+
+.partner_logo li a{
+    font-size: 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3D83DF;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.partner_logo li a img{
+    font-size: 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3D83DF;
+    height: 20px;
+    width: auto;
+    max-width: 100%;
+}
+
+.partner_logo .logo8 a img{
+    padding-left: 40px;
+    width: 190%;
+}
+.partner_logo .logo9 a img{
+    width: 150%;
+    
+}
+.partner_logo .logo10 a img{
+    width: 150%;
+}
+.partner_logo .logo11 a img{
+    width: 150%;
+}
+
+/*Style des Leader*/
+.leader{
+    display: flex;
+    height: 97vh;
+    background: rgb(213,246,246);
+    padding-top: 40px;
+    margin-top: 25px;
+}
+
+.sub-lead h1{
+    font-size: 34px;
+    color: #00B39B;
+    font-family: 'Work Sans';
+    font-weight: 300;
+    line-height: 44.2px;
+    letter-spacing: -0.3px;
+    margin: 15px 50px 18px 180px;
+    
+}
+
+.sub-lead p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 12px 50px 47px 180px;
+    color: #747474;
+    
+}
+
+.sub-lead img{
+    margin-left: 35px;
+}
+
+.Flex_Table{
+   margin: 0px 60px;
+  
+}
+
+.table_card{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 50px;
+}
+
+.card_border4{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 50px;
+}
+
+
+.table_card .card_border1, .card_border2{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.05);
+    width: 220px;
+    height: 275px;
+    text-align: center;
+    font-size: 13px;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.table_card .card_border1{
+    padding: 30px 10px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.table_card .card_border2{
+    padding: 50px 8px;
+    margin-top: 0px;
+}
+
+.card_border4 .element_table3{
+    padding: 5px 8px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+.card_border4 .element_table4{
+    padding: 20px 8px;
+    margin-top: 0px;
+}
+
+.card_border4 .element_table3, .element_table4{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.05);
+    width: 220px;
+    height: 220px;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.table_card .card_border1 h3{
+    font-size: 25px;
+    color: #00b39b;
+    margin: 0.5em 0;
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+}
+
+.table_card .card_border2 h3{
+    font-size: 25px;
+    color: #00b39b;
+    margin: 0.5em 0;
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+}
+
+.card_border4 .element_table3 h3{
+    font-size: 25px;
+    color: #00b39b;
+    margin: 0.5em 0;
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+}
+
+.card_border4 .element_table4 h3{
+    font-size: 25px;
+    color: #00b39b;
+    margin: 0.5em 0;
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+}
+
+.table_card .card_border1 p{
+    margin: 0;
+    display: block;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 16.9px;
+    color: #747474;
+}
+
+.table_card .card_border2 p{
+    margin: 0;
+    display: block;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 16.9px;
+    color: #747474;
+}
+
+.card_border4 .element_table3 p{
+    margin: 0;
+    display: block;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 16.9px;
+    color: #747474;
+}
+
+.card_border4 .element_table4 p{
+    margin: 0;
+    display: block;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 16.9px;
+    color: #747474;
+}
+
+/*Style du section Lives*/
+.lives{
+    zoom: 1;
+    padding: 0px 20px;
+    margin-top:auto;
+    background:#FFFFFF;
+    position: relative;
+}
+
+.view{
+    padding-top: 72px;
+}
+
+.view h1{
+    font-size: 29px;
+    font-weight: 300;
+    text-align: center;
+    color: #00B39B;
+    margin: 0px 370px 0 370px;
+    padding-bottom: 20px;
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.3px;
+    font-style: normal;
+}
+
+.view p{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #747474;
+    text-align: center;
+    margin: 0px 415px 0 415px;
+}
+
+/*Style des cartes capitale*/
+
+  .capitol{
+    padding-top: 64px;
+    max-width: 1015px;
+    margin: auto;
+    padding: auto;
+  }
+  
+  .card_capitol{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .card_capitol .card_capital1, .card_capital2, .card_capital3, .card_capital4,
+  .card_capital5, .card_capital6, .card_capital7, .card_capital8, 
+  .card_capital9, .card_capital10
+{
+    width: 31.2%;
+    padding: 10px;
+}
+
+.card_item{
+    box-shadow: 0 5px 10px 0 transparent;
+    transition: box-shadow .2s ease 0s;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .03);
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 311px;
+    z-index: 2;
+    position: relative;
+    display: block;
+    color: #747474;
+    text-decoration: none;
+}
+
+.card_item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /*.card_item img {
+    border-radius: 5px 5px 0 0;
+  }*/
+  
+  .card_capital10 .card_item img{
+    width: 312px;
+    height: 280px;
+    margin: 0;
+}
+
+  .card_item .city-card {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 0px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+
+.city-card .button{
+    font-size: 10px;
+    padding: 8px 12px;
+    margin-left: 156px;
+    margin-top: 14px;
+    border: 0;
+    border-radius: 4px;
+    background: #3d83df;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1em;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s ease 0s;
+}
+
+/*Style du section Join Us*/
+
+.join{
+    max-width: 1015px;
+    zoom: 1;
+    position: relative;
+    padding: 62px;
+}
+
+.join h1{
+    font-size: 34.2px;
+    color: #333;
+    font-size: 29px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0px 50px 0px 370px;
+    padding-bottom: 20px;
+    font-family: 'Work Sans', Arial, sans-serif;
+    letter-spacing: -0.3px;
+    font-style: normal;
+}
+
+.join .button{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 17px;
+    background: #3d83df;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 12px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    font-size: 12px;
+    text-align: center;
+    margin: 0px 150px 0 520px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s ease 0s;
+}
+
+/*Style du footer*/
+
+.start_footer{
+    border-top: 1px solid #eef2f2;
+    text-align: center;
+    padding: 16px 0;
+    width: 100%;
+}
+
+.start_footer .foot, .start_footer p{
+    font-size: 12px;
+    color: #ababab;
+}
+
+.start_footer p{
+    margin-bottom: 0.4em;
+}
+
+.start_footer p a{
+    text-decoration: none;
+    color: #3d83df;
+    outline: 0;
+    transition: all .2s ease 0s;
+    background-color: transparent;
+}
+
+.start_footer p a:hover{
+    text-decoration: underline;
+}
